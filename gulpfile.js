@@ -51,14 +51,37 @@ if (!concurrency) {
     concurrency = os.cpus().length;
 }
 
-var sourceFiles = ['Source/**/*.js',
+// var sourceFiles = ['Source/**/*.js',
+var sourceFiles = ['Source/Core/*.js',
+                  // 'Source/DataSources/*.js',
+                //    '!Source/DataSources/*Entity*',
+                //    '!Source/DataSources/*Geometry*',
+                //    '!Source/DataSources/*Visualizer*',
+                //    '!Source/DataSources/*Graph*',
+                //    '!Source/DataSources/*Material*',
+                //    '!Source/DataSources/*DataSource*',
+                   '!Source/Core/*Geometry*',
+                   '!Source/Core/*Google*',
+                   '!Source/Core/*Bing*',
+                   '!Source/Core/*writeTextToCanvas*',
+                   '!Source/Core/*Fullscreen*',
+                   '!Source/Core/*Ion*',
+                   '!Source/Core/*Pelia*',
+                   '!Source/Core/*VRTheWorld*',
+                   '!Source/Core/*Video*',
+                   '!Source/Core/*Frustum*',
+                   '!Source/Core/*Screen*',
+                   '!Source/Core/*Feature*',
+                   '!Source/Core/*Animation*',
+
+                   '!Source/Core/WebGLConstants*',
                    '!Source/*.js',
                    '!Source/Workers/**',
                    '!Source/ThirdParty/Workers/**',
                    '!Source/ThirdParty/google-earth-dbroot-parser.js',
                    '!Source/ThirdParty/pako_inflate.js',
-                   '!Source/ThirdParty/crunch.js',
-                   'Source/Workers/createTaskProcessorWorker.js'];
+                   '!Source/ThirdParty/crunch.js'];
+                   //'Source/Workers/createTaskProcessorWorker.js'];
 
 var buildFiles = ['Specs/**/*.js',
                   '!Specs/SpecList.js',
@@ -75,7 +98,12 @@ var filesToClean = ['Source/Cesium.js',
                     'Apps/Sandcastle/templates/bucket.css',
                     'Cesium-*.zip'];
 
-var filesToSortRequires = ['Source/**/*.js',
+// var filesToSortRequires = ['Source/**/*.js',
+var filesToSortRequires = ['Source/Core/*.js',
+                            '!Source/Core/*Geometry*',
+                            '!Source/Core/*Google*',
+                            '!Source/Core/WebGLConstants*',
+//                            'Source/DataSources/*.js',
                            '!Source/Shaders/**',
                            '!Source/ThirdParty/**',
                            '!Source/Workers/cesiumWorkerBootstrapper.js',
